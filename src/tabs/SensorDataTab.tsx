@@ -10,10 +10,10 @@ export default function SensorDataTab() {
     <div>
       <h1>Sensor Data</h1>
       {
-        sensorData.map((sensor: { name: string; value: string }) => (
-          <div key={sensor.name}>
-            <h2>{sensor.name}</h2>
-            <p>{sensor.value}</p>
+        sensorData.map((sensor: { Id: string; Value: string }) => (
+          <div key={sensor.Id}>
+            <h2>{sensor.Id}</h2>
+            <p>{sensor.Value}</p>
           </div>
         ))
       }

@@ -10,7 +10,7 @@ export default function DashDrawer() {
 
 
   return (
-    <div style={{width: drawerWidth, height: '100vh', display: 'flex', alignItems: "flex-start"}}>
+    <div style={{width: drawerWidth, height: '100vh', display: 'flex', alignItems: "flex-start", backgroundColor: "aquamarine"}}>
       {/*<Toolbar />*/}
 
         <List sx={{width: '100%'}}>

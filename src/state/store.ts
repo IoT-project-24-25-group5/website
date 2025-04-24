@@ -8,6 +8,9 @@ const slice = createSlice({
     currentTab: 'home', // 'home', 'location', 'video', 'devices', 'sensors'
     serverData: {
       location: {latitude: 51.184, longitude: 4.42},
+      redlight: false,
+      center_allowed_location: {latitude: 51.184, longitude: 4.42},
+      locationrange: 0,
       sensors: [],
     },
 
