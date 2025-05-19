@@ -10,11 +10,11 @@ export default function DashDrawer() {
 
 
   return (
-    <div style={{width: drawerWidth, height: '100vh', display: 'flex', alignItems: "flex-start", backgroundColor: "aquamarine"}}>
+    <div style={{width: drawerWidth, height: '100vh', display: 'flex', alignItems: "flex-start"}}>
       {/*<Toolbar />*/}
 
         <List sx={{width: '100%'}}>
-          {['Location', 'Video', 'Sensors', 'Devices'].map((text) => (
+          {['Location', 'Video', 'Sensors', 'Devices', 'WebsocketTest'].map((text) => (
             <ListItem key={text} disablePadding sx={{width: '100%'}}>
               <ListItemButton onClick={() => {dispatch(setCurrentTab(text)); console.log(`clicked on ${text}`)}}>
                 {/*<ListItemIcon>*/}
