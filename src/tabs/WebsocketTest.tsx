@@ -61,7 +61,7 @@ export default function WebsocketTest() {
       </div>
       <div style={{margin: 5}}>
         <Button variant="outlined"
-                onClick={() => setText('{"type": "location", "longitude": 4.123456, "latitude": 51.123456}')}> set new
+                onClick={() => setText('{"type": "location", "longitude": 4.42, "latitude": 51.184}')}> set new
           location</Button>
         {
           '{"type": "location", "longitude": 4.42, "latitude": 51.184}'
@@ -84,7 +84,7 @@ export default function WebsocketTest() {
       </div>
       <div style={{margin: 5}}>
         <Button variant="outlined"
-                onClick={() => setText('{"type": "locationcenter", "longitude": 4.123456, "latitude": 51.123456}')}> set
+                onClick={() => setText('{"type": "locationcenter", "longitude": 4.42, "latitude": 51.184}')}> set
           new center
           location</Button>
         {

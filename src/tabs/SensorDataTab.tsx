@@ -8,13 +8,13 @@ export default function SensorDataTab() {
   const sensorData = useSelector((state: {serverData: {sensors: [any]}}) => state.serverData.sensors)
 
   const ff = () => {
-    console.log(sensorData)
+    // console.log(sensorData)
     return <div></div>
   }
 
 
   return (
-    <div>
+    <div style={{margin: 15}}>
       <h1>Sensor Data</h1>
       {ff()}
       <Grid container spacing={2} sx={{padding: '10px', width: '80vw'}}>
