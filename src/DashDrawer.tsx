@@ -29,7 +29,7 @@ export default function DashDrawer() {
       {/*<Toolbar />*/}
 
         <List sx={{width: '100%'}}>
-          {['Location', 'Video', 'Sensors', 'Devices', 'WebsocketTest'].map((text) => (
+          {['Location', 'Video', 'Sensors', 'Anomalies', 'WebsocketTest'].map((text) => (
             <ListItem key={text} sx={{width: '100%'}}>
               <ThemeProvider theme={theme}>
               <ListItemButton sx={{ borderRadius: 2, backgroundColor: text == tab? "#121212" : "transparent", margin: "-4px"}} onClick={() => {dispatch(setCurrentTab(text)); console.log(`clicked on ${text}`)}}>

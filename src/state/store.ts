@@ -12,6 +12,7 @@ const slice = createSlice({
       center_allowed_location: {latitude: 51.184, longitude: 4.42},
       locationrange: 0,
       sensors: [],
+      anomalies: [],
     },
 
   },

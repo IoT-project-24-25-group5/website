@@ -6,6 +6,8 @@ import DashDrawer from "./DashDrawer.tsx";
 import MapTab from "./tabs/MapTab.jsx";
 import SensorDataTab from "./tabs/SensorDataTab.tsx";
 import WebsocketTest from "./tabs/WebsocketTest.tsx";
+import VideoTab from "./tabs/VideoTab.tsx";
+import AnomaliesTab from "./tabs/AnomaliesTab.tsx";
 // import MailIcon from '@mui/icons-material/Mail';
 // import InboxIcon from '@mui/icons-material/MoveToInbox';
 
@@ -33,9 +35,9 @@ export default function Dashboard() {
             case 'Location':
               return (<MapTab/>)
             case 'Video':
-              return (<></>)
-            case 'Devices':
-              return (<></>)
+              return (<VideoTab/>)
+            case 'Anomalies':
+              return (<AnomaliesTab/>)
             case 'Sensors':
               return (<SensorDataTab/>)
             case 'WebsocketTest':

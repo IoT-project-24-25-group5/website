@@ -91,6 +91,13 @@ export default function WebsocketTest() {
           '{"type": "locationcenter", "longitude": 4.42, "latitude": 51.184}'
         }
       </div>
+      <div style={{margin: 5}}>
+        <Button variant="outlined"
+                onClick={() => setText('{"type": "notification", "message": "cat died"}')}> add anomaly</Button>
+        {
+          '{"type": "notification", "message": "cat died"}'
+        }
+      </div>
 
 
     </div>

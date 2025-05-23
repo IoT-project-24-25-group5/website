@@ -1,4 +1,5 @@
 import store, {setConnected, setNewState} from './state/store.ts';
+import {setAnswer} from "./tabs/rtcpc.ts";
 
 const socket = new WebSocket('wss://iot.philippevoet.dev')
 
@@ -8,9 +9,20 @@ socket.onmessage = (event) => {
   if (data['type'] != undefined && data['type'] == 'state') {
     store.dispatch(setNewState(data))
   }
-  // if (data.type == 'location') {
-  //   store.dispatch(setLocation({longitude: data.longtitude, latitude: data.latitude}))
-  // }
+  else if (data['type'] != undefined && data['type'] == 'answer') {
+    setAnswer(data['sdp'])
+  }
+  else if(data['type'] != undefined && data['type'] == 'frame') {
+    let videoCanvas = document.getElementById('videoCanvas') as HTMLCanvasElement;
+    if (videoCanvas) {
+      const ctx = videoCanvas.getContext('2d');
+      const img = new Image();
+      img.src = 'data:image/jpeg;base64,' + data['frame'];
+      img.onload = () => {
+        ctx?.drawImage(img, 0, 0, videoCanvas.width, videoCanvas.height);
+      }
+    }
+  }
 }
 
 socket.onopen = () => {
